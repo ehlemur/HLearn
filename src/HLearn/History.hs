@@ -48,11 +48,12 @@ dhist :: DisplayFunction
 dhist r a = do
     putStrLn $ (concat $ P.replicate (reportLevel r) " - ") ++ show a
 
-instance Semigroup a => Semigroup (IO a) where
+{- instance Semigroup a => Semigroup (IO a) where
     ioa1 + ioa2 = do
         a1 <- ioa1
         a2 <- ioa2
         return $ a1+a2
+-}
 
 -------------------------------------------------------------------------------
 
